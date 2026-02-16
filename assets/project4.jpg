@@ -1,0 +1,36 @@
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="400" fill="#0A0A0A"/>
+  
+  <!-- Gold gradient -->
+  <defs>
+    <linearGradient id="goldPortfolio" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#D4AF37;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#F4D03F;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#D4AF37;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Browser mockup -->
+  <rect x="50" y="50" width="700" height="300" fill="#1A1A1A" rx="12"/>
+  <rect x="50" y="50" width="700" height="40" fill="#2A2A2A" rx="12"/>
+  <circle cx="75" cy="70" r="6" fill="#D4AF37"/>
+  <circle cx="95" cy="70" r="6" fill="#F4D03F"/>
+  <circle cx="115" cy="70" r="6" fill="#D4AF37"/>
+  
+  <!-- Portfolio content -->
+  <text x="400" y="150" font-family="Arial" font-size="48" font-weight="bold" fill="url(#goldPortfolio)" text-anchor="middle">PORTFOLIO</text>
+  <text x="400" y="195" font-family="Arial" font-size="20" fill="#F5F5F5" text-anchor="middle">Modern Web Design</text>
+  
+  <!-- Gold accent line -->
+  <rect x="280" y="210" width="240" height="4" fill="url(#goldPortfolio)" rx="2"/>
+  
+  <!-- Feature boxes -->
+  <rect x="100" y="240" width="150" height="80" fill="url(#goldPortfolio)" opacity="0.2" rx="8"/>
+  <rect x="325" y="240" width="150" height="80" fill="url(#goldPortfolio)" opacity="0.2" rx="8"/>
+  <rect x="550" y="240" width="150" height="80" fill="url(#goldPortfolio)" opacity="0.2" rx="8"/>
+  
+  <text x="175" y="275" font-family="Arial" font-size="16" font-weight="bold" fill="#D4AF37" text-anchor="middle">Projects</text>
+  <text x="400" y="275" font-family="Arial" font-size="16" font-weight="bold" fill="#D4AF37" text-anchor="middle">Skills</text>
+  <text x="625" y="275" font-family="Arial" font-size="16" font-weight="bold" fill="#D4AF37" text-anchor="middle">Contact</text>
+</svg>
