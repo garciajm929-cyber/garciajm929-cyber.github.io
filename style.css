@@ -558,6 +558,99 @@ section {
   background: var(--color-black);
 }
 
+/* Media Grid Layout for Side-by-Side */
+.projects-media-grid {
+  grid-template-columns: repeat(2, 1fr) !important;
+  max-width: 100%;
+}
+
+/* Image Container Styling */
+.project-image-container {
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 2px solid rgba(212, 175, 55, 0.3);
+  background: var(--color-black-soft);
+  box-shadow: var(--shadow-lg);
+  transition: var(--transition-normal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-image-container:hover {
+  border-color: var(--color-gold);
+  box-shadow: var(--shadow-glow);
+  transform: translateY(-5px);
+}
+
+.project-featured-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Project Description Box */
+.project-description-box {
+  grid-column: 1 / -1;
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(212, 175, 55, 0.05));
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 16px;
+  padding: var(--spacing-md);
+  margin-top: var(--spacing-md);
+}
+
+.description-title {
+  color: var(--color-gold);
+  font-size: var(--font-size-2xl);
+  margin-bottom: var(--spacing-sm);
+  font-weight: 700;
+}
+
+.description-text {
+  color: var(--color-gray);
+  line-height: 1.8;
+  margin-bottom: var(--spacing-sm);
+  font-size: var(--font-size-base);
+}
+
+.description-highlights {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-md);
+  flex-wrap: wrap;
+}
+
+.highlight-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(212, 175, 55, 0.1);
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  transition: var(--transition-fast);
+}
+
+.highlight-item:hover {
+  background: rgba(212, 175, 55, 0.2);
+  border-color: var(--color-gold);
+  transform: translateY(-2px);
+}
+
+.highlight-item .highlight-icon {
+  font-size: var(--font-size-xl);
+}
+
+.highlight-item .highlight-label {
+  color: var(--color-white);
+  font-weight: 600;
+  font-size: var(--font-size-base);
+}
+
+
+
 
 /* ===================================
    SKILLS SECTION
@@ -811,6 +904,10 @@ section {
 
   .projects-grid {
     grid-template-columns: 1fr;
+  }
+
+  .projects-media-grid {
+    grid-template-columns: 1fr !important;
   }
 
   .skills-grid {
