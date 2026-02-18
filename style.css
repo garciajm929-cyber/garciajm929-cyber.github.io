@@ -1004,10 +1004,6 @@ section {
     --spacing-lg: 3rem;
     --spacing-xl: 4rem;
   }
-
-  .about-content {
-    grid-template-columns: 1fr;
-  }
 }
 
 @media (max-width: 768px) {
