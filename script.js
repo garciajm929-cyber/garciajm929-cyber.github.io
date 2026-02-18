@@ -8,14 +8,14 @@ let lastScroll = 0;
 
 window.addEventListener('scroll', () => {
   const currentScroll = window.pageYOffset;
-  
+
   // Add scrolled class for styling
   if (currentScroll > 50) {
     navbar.classList.add('scrolled');
   } else {
     navbar.classList.remove('scrolled');
   }
-  
+
   lastScroll = currentScroll;
 });
 
@@ -25,16 +25,16 @@ const navLinks = document.querySelectorAll('.nav-link');
 
 window.addEventListener('scroll', () => {
   let current = '';
-  
+
   sections.forEach(section => {
     const sectionTop = section.offsetTop;
     const sectionHeight = section.clientHeight;
-    
+
     if (window.pageYOffset >= sectionTop - 200) {
       current = section.getAttribute('id');
     }
   });
-  
+
   navLinks.forEach(link => {
     link.classList.remove('active');
     if (link.getAttribute('href').slice(1) === current) {
@@ -49,7 +49,7 @@ navLinks.forEach(link => {
     e.preventDefault();
     const targetId = link.getAttribute('href');
     const targetSection = document.querySelector(targetId);
-    
+
     if (targetSection) {
       const offsetTop = targetSection.offsetTop - 70;
       window.scrollTo({
@@ -57,7 +57,7 @@ navLinks.forEach(link => {
         behavior: 'smooth'
       });
     }
-    
+
     // Close mobile menu if open
     const navMenu = document.getElementById('navMenu');
     navMenu.classList.remove('active');
@@ -70,7 +70,7 @@ const navMenu = document.getElementById('navMenu');
 
 mobileToggle.addEventListener('click', () => {
   navMenu.classList.toggle('active');
-  
+
   // Change icon
   if (navMenu.classList.contains('active')) {
     mobileToggle.textContent = '✕';
@@ -92,7 +92,7 @@ const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('visible');
-      
+
       // Animate skill bars when skills section is visible
       if (entry.target.id === 'skills') {
         animateSkillBars();
@@ -111,10 +111,10 @@ fadeElements.forEach(el => observer.observe(el));
 
 function animateSkillBars() {
   const skillBars = document.querySelectorAll('.skill-progress');
-  
+
   skillBars.forEach((bar, index) => {
     const progress = bar.getAttribute('data-progress');
-    
+
     setTimeout(() => {
       bar.style.width = progress + '%';
     }, index * 100); // Stagger animation
@@ -142,7 +142,7 @@ const hero = document.querySelector('.hero');
 window.addEventListener('scroll', () => {
   const scrolled = window.pageYOffset;
   const parallaxSpeed = 0.5;
-  
+
   if (hero && scrolled < window.innerHeight) {
     hero.style.transform = `translateY(${scrolled * parallaxSpeed}px)`;
   }
@@ -176,7 +176,7 @@ projectCards.forEach(card => {
   card.addEventListener('mouseenter', () => {
     card.style.zIndex = '10';
   });
-  
+
   card.addEventListener('mouseleave', () => {
     card.style.zIndex = '1';
   });
@@ -189,12 +189,36 @@ projectCards.forEach(card => {
 document.addEventListener('DOMContentLoaded', () => {
   // Add loaded class to body for any CSS transitions
   document.body.classList.add('loaded');
-  
+
   // Set initial active nav link
   const homeLink = document.querySelector('a[href="#home"]');
   if (homeLink) {
     homeLink.classList.add('active');
   }
-  
+
   console.log('Portfolio website loaded successfully! 🎉');
 });
+
+// ===================================
+// LIGHTBOX FUNCTIONALITY
+// ===================================
+
+function openLightbox() {
+  const lightbox = document.getElementById('lightbox');
+  lightbox.classList.add('active');
+  document.body.style.overflow = 'hidden'; // prevent background scroll
+}
+
+function closeLightbox() {
+  const lightbox = document.getElementById('lightbox');
+  lightbox.classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+// Close lightbox with Escape key
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    closeLightbox();
+  }
+});
+

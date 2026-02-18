@@ -148,8 +148,9 @@
 
         <!-- Image Project Card -->
         <div class="project-media-card">
-          <div class="project-image-container">
-            <img src="assets/profile-image.jpg" alt="Featured Project" class="project-featured-image">
+          <div class="project-image-container" onclick="openLightbox()" title="Click to view fullscreen">
+            <img src="assets/profile-image.jpg" alt="Featured Project" class="project-featured-image clickable-image">
+            <div class="image-overlay"><span>🔍 Click to Expand</span></div>
           </div>
           <div class="media-description">
             <h4 class="media-title">Creative Vision & Innovation</h4>
@@ -405,6 +406,12 @@
 
   <!-- JavaScript -->
   <script src="script.js"></script>
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+    <img src="assets/profile-image.jpg" alt="Creative Vision & Innovation" class="lightbox-image">
+  </div>
+
 </body>
 
 </html>
