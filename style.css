@@ -777,53 +777,44 @@ section {
   font-size: var(--font-size-2xl);
 }
 
-.skill-item {
-  margin-bottom: var(--spacing-md);
+/* Icon Grid */
+.skill-icons-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
 }
 
-.skill-header {
+.skill-icon-item {
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 0.5rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 0.5rem;
+  border-radius: 10px;
+  background: rgba(212, 175, 55, 0.05);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  transition: var(--transition-fast);
+  cursor: default;
 }
 
-.skill-name {
+.skill-icon-item:hover {
+  background: rgba(212, 175, 55, 0.12);
+  border-color: var(--color-gold);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-sm);
+}
+
+.skill-icon-item i {
+  font-size: 2.5rem;
+}
+
+.skill-icon-item span {
+  font-size: 0.75rem;
   font-weight: 600;
   color: var(--color-white);
+  text-align: center;
 }
 
-.skill-level {
-  color: var(--color-gold);
-  font-size: 0.875rem;
-}
-
-.skill-bar {
-  height: 8px;
-  background: rgba(212, 175, 55, 0.1);
-  border-radius: 10px;
-  overflow: hidden;
-  position: relative;
-}
-
-.skill-progress {
-  height: 100%;
-  background: linear-gradient(90deg, var(--color-gold-dark), var(--color-gold), var(--color-gold-light));
-  border-radius: 10px;
-  transition: width 1s ease;
-  position: relative;
-  width: 0;
-}
-
-.skill-progress::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-  animation: shimmer 2s infinite;
-}
 
 /* ===================================
    CONTACT SECTION
