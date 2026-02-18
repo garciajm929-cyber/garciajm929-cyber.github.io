@@ -434,6 +434,7 @@ section {
 .slideshow-container {
   position: relative;
   width: 100%;
+  max-width: 220px;
   border-radius: 16px;
   overflow: hidden;
   border: 2px solid rgba(212, 175, 55, 0.3);
