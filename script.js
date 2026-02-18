@@ -222,3 +222,29 @@ document.addEventListener('keydown', (e) => {
   }
 });
 
+// ===================================
+// ABOUT SLIDESHOW
+// ===================================
+
+let currentSlide = 0;
+
+function goToSlide(index) {
+  const slides = document.querySelectorAll('.slide');
+  const dots = document.querySelectorAll('.dot');
+  if (!slides.length) return;
+
+  slides[currentSlide].classList.remove('active');
+  dots[currentSlide].classList.remove('active');
+
+  currentSlide = (index + slides.length) % slides.length;
+
+  slides[currentSlide].classList.add('active');
+  dots[currentSlide].classList.add('active');
+}
+
+// Auto-advance slideshow every 4 seconds
+setInterval(() => {
+  goToSlide(currentSlide + 1);
+}, 4000);
+
+
