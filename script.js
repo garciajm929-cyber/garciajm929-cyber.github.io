@@ -259,4 +259,33 @@ setInterval(() => {
   goToSlide(currentSlide + 1);
 }, 4000);
 
+// ===================================
+// PROJECT CAROUSEL
+// ===================================
+
+let currentProject = 0;
+
+function goToProject(index) {
+  const slides = document.querySelectorAll('.carousel-slide');
+  const dots = document.querySelectorAll('.carousel-dot');
+  if (!slides.length) return;
+
+  slides[currentProject].classList.remove('active');
+  dots[currentProject].classList.remove('active');
+
+  currentProject = (index + slides.length) % slides.length;
+
+  slides[currentProject].classList.add('active');
+  dots[currentProject].classList.add('active');
+}
+
+function prevProject() {
+  goToProject(currentProject - 1);
+}
+
+function nextProject() {
+  goToProject(currentProject + 1);
+}
+
+
 

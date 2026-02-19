@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -38,7 +38,7 @@
         <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
       <button class="mobile-menu-toggle" id="mobileToggle" aria-label="Toggle menu">
-        ☰
+        â˜°
       </button>
     </div>
   </nav>
@@ -86,7 +86,7 @@
           </p>
 
           <div class="education-card">
-            <h4>🎓 Academic Journey</h4>
+            <h4>ðŸŽ“ Academic Journey</h4>
             <p class="degree">Bachelor of Science in Information Technology</p>
             <p class="year">Currently Enrolled</p>
           </div>
@@ -94,25 +94,25 @@
 
         <div class="about-highlights">
           <div class="highlight-card">
-            <div class="highlight-icon">💻</div>
+            <div class="highlight-icon">ðŸ’»</div>
             <h4>Problem Solver</h4>
             <p>Analytical thinking and creative solutions</p>
           </div>
 
           <div class="highlight-card">
-            <div class="highlight-icon">🚀</div>
+            <div class="highlight-icon">ðŸš€</div>
             <h4>Quick Learner</h4>
             <p>Adapting to new technologies rapidly</p>
           </div>
 
           <div class="highlight-card">
-            <div class="highlight-icon">🤝</div>
+            <div class="highlight-icon">ðŸ¤</div>
             <h4>Team Player</h4>
             <p>Collaborative and communicative</p>
           </div>
 
           <div class="highlight-card">
-            <div class="highlight-icon">🎯</div>
+            <div class="highlight-icon">ðŸŽ¯</div>
             <h4>Goal-Oriented</h4>
             <p>Focused on continuous improvement</p>
           </div>
@@ -143,203 +143,68 @@
     <div class="container">
       <div class="section-header">
         <h2 class="section-title">Featured Projects</h2>
-        <p class="section-subtitle">
-          A showcase of my recent work and technical achievements
-        </p>
+        <p class="section-subtitle">A showcase of my recent work and technical achievements</p>
       </div>
 
-      <div class="projects-grid projects-media-grid">
+      <!-- Project Carousel -->
+      <div class="project-carousel">
+        <button class="carousel-btn carousel-prev" onclick="prevProject()" aria-label="Previous">&#8249;</button>
+        <div class="carousel-track">
 
-        <!-- Video Project Card -->
-        <div class="project-media-card">
-          <div class="project-video-container">
-            <video class="project-video" controls autoplay muted loop>
-              <source src="assets/jm-garcia-video.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
+          <!-- Slide 1: Video -->
+          <div class="carousel-slide active">
+            <div class="carousel-media">
+              <div class="project-video-container">
+                <video class="project-video" controls autoplay muted loop>
+                  <source src="assets/jm-garcia-video.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+            <div class="carousel-info">
+              <h4 class="media-title">Project Showcase</h4>
+              <p class="media-text">A visual exploration of Gawang Tanauan, celebrating the intersection of heritage and craftsmanship. This project utilizes kinetic typography and minimalist motion design to showcase the organic textures of timeless rattan, bamboo, and clay artistry, bridging the gap between traditional Philippine trades and modern digital storytelling.</p>
+            </div>
           </div>
-          <div class="media-description">
-            <h4 class="media-title">Project Showcase</h4>
-            <p class="media-text">A visual exploration of Gawang Tanauan, celebrating the intersection of heritage and
-              craftsmanship. This project utilizes kinetic typography and minimalist motion design to showcase the
-              organic textures of timeless rattan, bamboo, and clay artistry, bridging the gap between traditional
-              Philippine trades and modern digital storytelling.</p>
+
+          <!-- Slide 2: Creative Vision -->
+          <div class="carousel-slide">
+            <div class="carousel-media">
+              <div class="project-image-container" onclick="openLightbox()" title="Click to view fullscreen">
+                <img src="assets/profile-image.jpg" alt="Creative Vision" class="project-featured-image clickable-image">
+                <div class="image-overlay"><span>&#128269; Click to Expand</span></div>
+              </div>
+            </div>
+            <div class="carousel-info">
+              <h4 class="media-title">Creative Vision &amp; Innovation</h4>
+              <p class="media-text">Showcasing the intersection of technology and creativity through visual storytelling. This collection represents a journey of learning, growth, and artistic expression.</p>
+            </div>
           </div>
+
+          <!-- Slide 3: Project Design -->
+          <div class="carousel-slide">
+            <div class="carousel-media">
+              <div class="project-image-container" onclick="openLightbox2()" title="Click to view fullscreen">
+                <img src="assets/project-extra1.png" alt="Project Design" class="project-featured-image clickable-image">
+                <div class="image-overlay"><span>&#128269; Click to Expand</span></div>
+              </div>
+            </div>
+            <div class="carousel-info">
+              <h4 class="media-title">Project Design</h4>
+              <p class="media-text">A creative design project showcasing technical skills and innovative thinking.</p>
+            </div>
+          </div>
+
         </div>
-
-        <!-- Image Project Card -->
-        <div class="project-media-card">
-          <div class="project-image-container" onclick="openLightbox()" title="Click to view fullscreen">
-            <img src="assets/profile-image.jpg" alt="Featured Project" class="project-featured-image clickable-image">
-            <div class="image-overlay"><span>🔍 Click to Expand</span></div>
-          </div>
-          <div class="media-description">
-            <h4 class="media-title">Creative Vision & Innovation</h4>
-            <p class="media-text">
-              Showcasing the intersection of technology and creativity through visual storytelling.
-              This collection represents a journey of learning, growth, and artistic expression.
-            </p>
-          </div>
-        </div>
-
-        <!-- Extra Image Project Card -->
-        <div class="project-media-card">
-          <div class="project-image-container" onclick="openLightbox2()" title="Click to view fullscreen">
-            <img src="assets/project-extra1.png" alt="Project Image" class="project-featured-image clickable-image">
-            <div class="image-overlay"><span>🔍 Click to Expand</span></div>
-          </div>
-          <div class="media-description">
-            <h4 class="media-title">Project Design</h4>
-            <p class="media-text">
-              A creative design project showcasing technical skills and innovative thinking.
-            </p>
-          </div>
-        </div>
-
+        <button class="carousel-btn carousel-next" onclick="nextProject()" aria-label="Next">&#8250;</button>
       </div>
+
+      <!-- Dot Indicators -->
+      <div class="carousel-dots">
+        <span class="carousel-dot active" onclick="goToProject(0)"></span>
+        <span class="carousel-dot" onclick="goToProject(1)"></span>
+        <span class="carousel-dot" onclick="goToProject(2)"></span>
+      </div>
+
     </div>
   </section>
 
-  <!-- Skills Section -->
-  <section class="skills fade-in" id="skills">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Technical Skills</h2>
-        <p class="section-subtitle">
-          Technologies and tools I work with regularly
-        </p>
-      </div>
-
-      <div class="skills-grid">
-
-        <!-- Frontend Development -->
-        <div class="skill-category">
-          <h3><span class="skill-category-icon">🎨</span> Frontend Development</h3>
-          <div class="skill-icons-grid">
-            <div class="skill-icon-item">
-              <i class="devicon-html5-plain colored"></i>
-              <span>HTML5</span>
-            </div>
-            <div class="skill-icon-item">
-              <i class="devicon-css3-plain colored"></i>
-              <span>CSS3</span>
-            </div>
-            <div class="skill-icon-item">
-              <i class="devicon-javascript-plain colored"></i>
-              <span>JavaScript</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Backend Development -->
-        <div class="skill-category">
-          <h3><span class="skill-category-icon">⚙️</span> Backend Development</h3>
-          <div class="skill-icons-grid">
-            <div class="skill-icon-item">
-              <i class="devicon-php-plain colored"></i>
-              <span>PHP</span>
-            </div>
-            <div class="skill-icon-item">
-              <i class="devicon-python-plain colored"></i>
-              <span>Python</span>
-            </div>
-            <div class="skill-icon-item">
-              <i class="devicon-laravel-plain colored"></i>
-              <span>Laravel</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Database Management -->
-        <div class="skill-category">
-          <h3><span class="skill-category-icon">🗄️</span> Database Management</h3>
-          <div class="skill-icons-grid">
-            <div class="skill-icon-item">
-              <i class="devicon-mysql-plain colored"></i>
-              <span>MySQL</span>
-            </div>
-            <div class="skill-icon-item">
-              <i class="devicon-sqlite-plain colored"></i>
-              <span>SQLite</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Tools & Technologies -->
-        <div class="skill-category">
-          <h3><span class="skill-category-icon">🛠️</span> Tools &amp; Technologies</h3>
-          <div class="skill-icons-grid">
-            <div class="skill-icon-item">
-              <i class="devicon-github-original"></i>
-              <span>GitHub</span>
-            </div>
-            <div class="skill-icon-item">
-              <i class="devicon-vscode-plain colored"></i>
-              <span>VS Code</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section class="contact fade-in" id="contact">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Get In Touch</h2>
-        <p class="section-subtitle">
-          Let's connect and discuss opportunities
-        </p>
-      </div>
-
-      <div class="contact-content">
-        <div class="contact-links">
-
-          <a href="mailto:Senpaikinky111@gmail.com" class="contact-card">
-            <div class="contact-icon">✉️</div>
-            <h3>Email</h3>
-            <p>Senpaikinky111@gmail.com</p>
-          </a>
-
-          <a href="https://github.com/garciajm929-cyber" target="_blank" rel="noopener" class="contact-card">
-            <div class="contact-icon">💻</div>
-            <h3>GitHub</h3>
-            <p>@garciajm929-cyber</p>
-          </a>
-
-          <a href="tel:09641896353" class="contact-card">
-            <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
-            <h3>Contact #</h3>
-            <p>09641896353</p>
-          </a>
-
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2026 <span class="highlight">JM Garcia</span>. All rights reserved.</p>
-    </div>
-  </footer>
-
-  <!-- JavaScript -->
-  <script src="script.js"></script>
-  <!-- Lightbox Modal -->
-  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
-    <img src="assets/profile-image.jpg" alt="Creative Vision & Innovation" class="lightbox-image">
-  </div>
-  <!-- Lightbox Modal 2 -->
-  <div id="lightbox2" class="lightbox" onclick="closeLightbox2()">
-    <button class="lightbox-close" onclick="closeLightbox2()">&times;</button>
-    <img src="assets/project-extra1.png" alt="Project Design" class="lightbox-image">
-  </div>
-
-</body>
-
-</html>
