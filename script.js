@@ -206,11 +206,23 @@ document.addEventListener('DOMContentLoaded', () => {
 function openLightbox() {
   const lightbox = document.getElementById('lightbox');
   lightbox.classList.add('active');
-  document.body.style.overflow = 'hidden'; // prevent background scroll
+  document.body.style.overflow = 'hidden';
 }
 
 function closeLightbox() {
   const lightbox = document.getElementById('lightbox');
+  lightbox.classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+function openLightbox2() {
+  const lightbox = document.getElementById('lightbox2');
+  lightbox.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox2() {
+  const lightbox = document.getElementById('lightbox2');
   lightbox.classList.remove('active');
   document.body.style.overflow = '';
 }
