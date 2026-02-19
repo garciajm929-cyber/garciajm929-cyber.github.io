@@ -243,6 +243,8 @@ function closeLightbox3() {
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') {
     closeLightbox();
+    closeLightbox2();
+    closeLightbox3();
   }
 });
 
