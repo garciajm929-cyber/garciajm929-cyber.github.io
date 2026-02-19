@@ -227,6 +227,18 @@ function closeLightbox2() {
   document.body.style.overflow = '';
 }
 
+function openLightbox3() {
+  const lightbox = document.getElementById('lightbox3');
+  lightbox.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox3() {
+  const lightbox = document.getElementById('lightbox3');
+  lightbox.classList.remove('active');
+  document.body.style.overflow = '';
+}
+
 // Close lightbox with Escape key
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') {

@@ -200,6 +200,22 @@
             </div>
           </div>
 
+          <!-- Slide 4: Project Design 2 -->
+          <div class="carousel-slide">
+            <div class="carousel-media">
+              <div class="project-image-container" onclick="openLightbox3()" title="Click to view fullscreen">
+                <img src="assets/project-extra2.png" alt="Project Design 2"
+                  class="project-featured-image clickable-image">
+                <div class="image-overlay"><span>&#128269; Click to Expand</span></div>
+              </div>
+            </div>
+            <div class="carousel-info">
+              <h4 class="media-title">Project Design 2</h4>
+              <p class="media-text">Another creative design project showcasing technical skills and innovative thinking.
+              </p>
+            </div>
+          </div>
+
         </div>
         <button class="carousel-btn carousel-next" onclick="nextProject()" aria-label="Next">&#8250;</button>
       </div>
@@ -209,6 +225,7 @@
         <span class="carousel-dot active" onclick="goToProject(0)"></span>
         <span class="carousel-dot" onclick="goToProject(1)"></span>
         <span class="carousel-dot" onclick="goToProject(2)"></span>
+        <span class="carousel-dot" onclick="goToProject(3)"></span>
       </div>
 
     </div>
@@ -356,6 +373,11 @@
   <div id="lightbox2" class="lightbox" onclick="closeLightbox2()">
     <button class="lightbox-close" onclick="closeLightbox2()">&times;</button>
     <img src="assets/project-extra1.png" alt="Project Design" class="lightbox-image">
+  </div>
+  <!-- Lightbox Modal 3 -->
+  <div id="lightbox3" class="lightbox" onclick="closeLightbox3()">
+    <button class="lightbox-close" onclick="closeLightbox3()">&times;</button>
+    <img src="assets/project-extra2.png" alt="Project Design 2" class="lightbox-image">
   </div>
 
 </body>
