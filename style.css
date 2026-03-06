@@ -1132,8 +1132,17 @@ section {
     flex-direction: column;
   }
 
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
   .about-highlights {
     grid-template-columns: 1fr;
+  }
+
+  .slideshow-container {
+    height: 400px;
   }
 
   .projects-grid {
@@ -1142,6 +1151,35 @@ section {
 
   .projects-media-grid {
     grid-template-columns: 1fr !important;
+  }
+
+  .project-carousel {
+    display: block;
+  }
+
+  .carousel-slide {
+    grid-template-columns: 1fr;
+  }
+
+  .carousel-btn {
+    position: absolute;
+    top: 25%;
+    /* roughly middle of the image on mobile */
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    z-index: 10;
+    background: rgba(10, 10, 10, 0.5);
+    /* make more visible over images */
+  }
+
+  .carousel-prev {
+    left: -5px;
+  }
+
+  .carousel-next {
+    right: -5px;
   }
 
   .skills-grid {
